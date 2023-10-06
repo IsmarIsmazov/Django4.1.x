@@ -12,7 +12,6 @@ def post_list(request):
     except PageNotAnInteger:
         posts = paginator.page(1)
     except EmptyPage:
-
         posts = paginator.page(paginator.num_pages)
     return render(request,
                   'blog/post/list.html',
